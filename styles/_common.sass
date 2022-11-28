@@ -1,0 +1,152 @@
+@use 'sass:color'
+@use 'background'
+
+@custom-media --dark-theme (prefers-color-scheme: dark)
+
+// 多设备尺寸设定
+@custom-media --phone (width < 576px)
+@custom-media --xpad (576 <= width <768px)
+@custom-media --pad (768px <= width < 992px)
+@custom-media --laptab (992px <= width < 1200px)
+@custom-media --tv (width >= 1200px)
+
+/* -------------------------------------------------- */
+// 全局变量
+:root
+  --primary: #dc3545
+  --blue: #0d6efd
+  --dark: #1b1b1b
+  --primary-dark: #dc35469e
+  --text-family: system-ui, -apple-system, "Lato", "PingFang SC", "Microsoft YaHei", sans-serif
+  --code-family: monospace
+
+html
+  font-family: var(--text-family)
+  line-height: 1.6rem
+  background: rgb(245, 242, 237)
+  background-image: url(background.$background)
+  background-size: contain
+  background-repeat: repeat-y
+  letter-spacing: 0.03rem
+  word-wrap: break-word
+  @media (--dark-theme)
+    background: var(--dark)
+    color: #d5cfcf
+
+::selection
+  background: #ffcf4d
+  @media (--dark-theme)
+    background: #d99f00af
+    // color: #fff
+
+/* -------------------------------------------------- */
+// 容器多设备设定
+.container
+  width: 60%
+  margin: 0 auto
+  @media (--phone)
+    width: 100%
+    & > *
+      width: 80%
+      margin-left: auto
+      margin-right: auto
+  @media (--xpad)
+    width: 50%
+  @media (--pad)
+    width: 60%
+  @media (--laptab)
+    width: 50%
+  @media (--tv)
+    width: 36%
+
+:any-link
+  color: var(--primary)
+  text-decoration: none
+  @media (--dark-theme)
+    color: var(--primary-dark)
+  &:hover
+    text-decoration: underline wavy 2px
+    color: var(--primary-dark)
+    @media (--dark-theme)
+      color: var(--primary)
+
+/* 标题 */
+h1,
+.h1
+  font-size: 2.5rem
+  line-height: 2.5rem
+h2,
+.h1
+  font-size: 2rem
+  line-height: 2rem
+h3,
+.h3
+  font-size: 1.75rem
+  line-height: 1.75rem
+h4,
+.h4
+  font-size: 1.5rem
+  line-height: 1.5rem
+h5,
+.h5
+  font-size: 1.25rem
+h6,
+.h6
+  font-size: 1rem
+
+p
+  margin-block: 1rem 0.5rem
+  @media (--phone)
+    text-align: justify
+    word-break: break-all
+    word-wrap: break-word
+    hyphens: manual
+
+@custom-selector :--list ul, ol
+:--list
+  margin-block-start: 0.5rem
+  display: block
+  margin-block: 1rem
+  padding: 0
+ul
+  list-style: circle outside
+ol
+  list-style: decimal outside
+li
+  padding: 0
+  margin-block: 0.4rem
+
+:root
+  --mark-color: #818df8
+  --mark-text-color: #312e81
+mark
+  background: var(--mark-color)
+  color: var(--mark-text-color)
+  padding: .1rem .4rem
+  &::after
+    content: '::'
+  &::before
+    content: '::'
+
+:root
+  --code-color: #93c5fd
+  --code-text-color: #2563eb
+code
+  color: var(--code-text-color)
+  background: var(--code-color)
+  font-size: .9rem
+  font-weight: 200
+  padding: .1rem .3rem
+  border-radius: .2rem
+
+i,
+em
+  --itailc-text-color: #ec4899
+  color: var(--itailc-text-color)
+
+img
+  display: block
+  width: 100%
+  margin: 0 auto
+  &:hover
+    zoom: 1.2

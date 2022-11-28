@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/dist/dist.css": "/dist/dist.css"
+  },
+  "entry": "README.md",
+  "useStyle": true,
+  "port": 2222
+}

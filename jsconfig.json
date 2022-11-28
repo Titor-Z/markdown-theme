@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types/"],
+    "target": "ESNext",
+    "allowJs": true,
+    "module": "NodeNext",
+    "resolveJsonModule": true
+  }
+}

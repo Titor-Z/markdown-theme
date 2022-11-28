@@ -1,0 +1,33 @@
+{
+  "name": "@titor-z/markdown-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    ":dev": "sass --watch styles:dist",
+    "build:sass": "sass styles:dist",
+    "dev:": "postcss -w dist/main.css -o dist/dist.css"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.10",
+    "@types/node": "^18.11.9",
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "cssnano-preset-default": "^5.2.13",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "postcss-cssnext": "^3.1.1",
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.56.1",
+    "@titor-z/markdown": "2.0.0-beta"
+  },
+  "dependencies": {
+    "gulp-rename": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

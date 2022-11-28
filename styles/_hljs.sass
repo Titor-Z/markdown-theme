@@ -1,0 +1,43 @@
+pre
+  font-family: var(--code-family)
+  font-size: 0.9rem
+  line-height: 1.2rem
+  max-width: 100%
+  display: block !important
+  padding: 1.2rem 1.4rem
+  background-color: rgb(235, 235, 235)
+  text-align: left
+  & *
+    font-weight: 400
+  @media (--dark-theme) 
+    background: rgb(0, 0, 0)
+
+
+.hljs
+  background: #f3f3f3
+  color: #000000
+
+  & code
+    background: unset
+    @media (--dark-theme)
+      color: #f5f5f5
+  
+  @media (--dark-theme)
+    background: #111111
+    color: #f5f5f5
+
+  &-comment
+    color: #697070
+    display: inline-block
+
+    &:last-child
+      margin: 1rem
+
+  &-keyword
+    color: blue
+
+  &-title,
+  &-string,
+  &-number
+    color: var(--primary-dark)
+

@@ -1,0 +1,14 @@
+# System
+.DS_Store
+*.ini
+
+# Editor
+.atom
+.fleet
+.vs
+.code
+
+# project
+css/
+dist/
+node_modules/
