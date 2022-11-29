@@ -10,10 +10,14 @@ pre
   /* 11/29 22 ｜ 21:34 @Titor-Z */
   /* fix: 解决小屏模式下，宽度会自动加上内容宽度的问题 */
   box-sizing: border-box
+  overflow: auto
+  white-space: pre
   & code
     /* 11/29 22 ｜ 21:34 @Titor-Z */
     /* fix: 解决多列布局的缩进问题 */
     padding: 0
+    word-break: normal
+    word-wrap: break-word
   & *
     font-weight: 400
   @media (--dark-theme) 

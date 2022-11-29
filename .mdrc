@@ -3,6 +3,6 @@
     "/dist/dist.css": "/dist/dist.css"
   },
   "entry": "README.md",
-  "useStyle": true,
+  "useStyle": false,
   "port": 2222
 }
